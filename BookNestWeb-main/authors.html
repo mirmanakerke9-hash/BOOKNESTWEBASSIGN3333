@@ -3,424 +3,187 @@
 
 <head>
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BookNest | Authors & Team</title>
 
-    <link
-        rel="stylesheet"
-        href="css/style.css">
-</head>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 
+    <style>
+        /* Сохраняем родной бежевый фон и отменяем стандартные белые фоны Bootstrap */
+        .team-card, .author-card {
+            background-color: transparent !important;
+        }
+    </style>
+</head>
 
 <body>
 
-
 <!-- =========================
-     HEADER
+     HEADER (С гамбургер-меню)
 ========================= -->
-
-<header>
-
-    <div class="container nav-container">
-
-        <!-- Website logo -->
-
-        <a
-            href="index.html"
-            class="logo">
-
+<header class="bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark container nav-container py-3">
+        <a href="index.html" class="logo navbar-brand m-0">
             Book<span>Nest</span>
-
         </a>
 
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-        <!-- Navigation -->
-
-        <nav class="nav-menu">
-
-            <a href="index.html">
-                Home
-            </a>
-
-            <a href="books.html">
-                Library
-            </a>
-
-            <a
-                href="authors.html"
-                class="active">
-
-                Authors & Team
-
-            </a>
-
-            <a href="contact.html">
-                Contact
-            </a>
-
-        </nav>
-
-    </div>
-
+        <div class="collapse navbar-collapse nav-menu justify-content-end" id="mainNavbar">
+            <a href="index.html" class="nav-link d-inline-block px-3">Home</a>
+            <a href="books.html" class="nav-link d-inline-block px-3">Library</a>
+            <a href="authors.html" class="active nav-link d-inline-block px-3">Authors & Team</a>
+            <a href="contact.html" class="nav-link d-inline-block px-3">Contact</a>
+        </div>
+    </nav>
 </header>
-
 
 
 <!-- =========================
      PAGE LAYOUT
 ========================= -->
+<main class="page-layout container-fluid px-0">
 
-<main class="page-layout">
-
-
-    <!-- =========================
-         SIDEBAR
-    ========================= -->
-
+    <!-- SIDEBAR -->
     <aside class="sidebar">
+        <p class="small-title">BOOKNEST</p>
+        <h2>Our Team</h2>
+        <a href="index.html">Home</a>
+        <a href="books.html">Library</a>
+        <a href="authors.html">Authors</a>
+        <a href="contact.html">Contact</a>
 
-        <p class="small-title">
-            BOOKNEST
-        </p>
-
-
-        <h2>
-            Our Team
-        </h2>
-
-
-        <a href="index.html">
-            Home
-        </a>
-
-
-        <a href="books.html">
-            Library
-        </a>
-
-
-        <a href="authors.html">
-            Authors
-        </a>
-
-
-        <a href="contact.html">
-            Contact
-        </a>
-
-
-        <div class="sidebar-note">
-
-            <strong>
-                Good books bring people together.
-            </strong>
-
-            <p>
-                — BookNest
-            </p>
-
+        <div class="sidebar-note mt-4">
+            <strong>Good books bring people together.</strong>
+            <p>— BookNest</p>
         </div>
-
     </aside>
 
 
-
-    <!-- =========================
-         MAIN CONTENT
-    ========================= -->
-
+    <!-- MAIN CONTENT -->
     <div class="main-content">
 
-
         <!-- PAGE INTRO -->
-
-        <section class="page-hero">
-
-            <p class="small-title">
-                AUTHORS & TEAM
+        <section class="page-hero py-4">
+            <p class="small-title">AUTHORS & TEAM</p>
+            <h1 class="mb-3">People behind BookNest.</h1>
+            <p class="lead text-muted">
+                Meet our small team and discover some of our favorite authors.
             </p>
-
-
-            <h1>
-                People behind BookNest.
-            </h1>
-
-
-            <p>
-                Meet our small team and discover
-                some of our favorite authors.
-            </p>
-
         </section>
 
 
-
         <!-- =========================
-             TEAM MEMBERS
+             TEAM MEMBERS (Bootstrap Grid)
         ========================= -->
+        <section class="section my-5">
+            <p class="small-title">OUR TEAM</p>
+            <h2>Team Members</h2>
 
-        <section class="section">
+            <div class="row g-4 mt-2">
+                <!-- INZHU -->
+                <div class="col-12 col-md-6">
+                    <article class="team-card d-flex align-items-center p-3 border rounded h-100">
+                        <img src="images/Inzhu.jpg" alt="Inzhu" class="rounded-circle me-3" style="width: 80px; height: 80px; object-fit: cover;">
+                        <div>
+                            <h3 class="h5 mb-1">Inzhu</h3>
+                            <p class="text-muted m-0">Web designer and BookNest team member.</p>
+                        </div>
+                    </article>
+                </div>
 
-            <p class="small-title">
-                OUR TEAM
-            </p>
-
-
-            <h2>
-                Team Members
-            </h2>
-
-
-            <div class="team-cards">
-
-
-                <!-- =====================
-                     INZHU
-                ====================== -->
-
-                <article class="team-card">
-
-
-                    <img
-                        src="images/Inzhu.jpg"
-                        alt="Inzhu">
-
-
-                    <div>
-
-                        <h3>
-                            Inzhu
-                        </h3>
-
-
-                        <p>
-                            Web designer and
-                            BookNest team member.
-                        </p>
-
-                    </div>
-
-                </article>
-
-
-
-                <!-- =====================
-                     AKERKE
-                ====================== -->
-
-                <article class="team-card">
-
-
-                    <img
-                        src="images/Akerke.jpg"
-                        alt="Akerke">
-
-
-                    <div>
-
-                        <h3>
-                            Akerke
-                        </h3>
-
-
-                        <p>
-                            Content creator and
-                            BookNest team member.
-                        </p>
-
-                    </div>
-
-                </article>
-
-
+                <!-- AKERKE -->
+                <div class="col-12 col-md-6">
+                    <article class="team-card d-flex align-items-center p-3 border rounded h-100">
+                        <img src="images/Akerke.jpg" alt="Akerke" class="rounded-circle me-3" style="width: 80px; height: 80px; object-fit: cover;">
+                        <div>
+                            <h3 class="h5 mb-1">Akerke</h3>
+                            <p class="text-muted m-0">Content creator and BookNest team member.</p>
+                        </div>
+                    </article>
+                </div>
             </div>
-
         </section>
 
 
-
         <!-- =========================
-             FAVORITE AUTHORS
+             FAVORITE AUTHORS (Bootstrap Grid)
         ========================= -->
+        <section class="section my-5">
+            <p class="small-title">AUTHORS</p>
+            <h2>Favorite Authors</h2>
 
-        <section class="section">
-
-
-            <p class="small-title">
-                AUTHORS
-            </p>
-
-
-            <h2>
-                Favorite Authors
-            </h2>
-
-
-
-            <div class="author-grid">
-
-
+            <div class="row g-4 mt-2">
                 <!-- AUTHOR 1 -->
-
-                <article class="author-card">
-
-                    <span>
-                        01
-                    </span>
-
-
-                    <h3>
-                        Jane Austen
-                    </h3>
-
-
-                    <p>
-                        Famous for romantic novels
-                        and memorable characters.
-                    </p>
-
-                </article>
-
-
+                <div class="col-12 col-sm-6 col-md-3">
+                    <article class="author-card p-3 border rounded h-100">
+                        <span class="badge bg-secondary mb-2">01</span>
+                        <h3 class="h5 mt-1">Jane Austen</h3>
+                        <p class="text-muted small mb-0">Famous for romantic novels and memorable characters.</p>
+                    </article>
+                </div>
 
                 <!-- AUTHOR 2 -->
-
-                <article class="author-card">
-
-                    <span>
-                        02
-                    </span>
-
-
-                    <h3>
-                        J.R.R. Tolkien
-                    </h3>
-
-
-                    <p>
-                        Known for creating detailed
-                        fantasy worlds.
-                    </p>
-
-                </article>
-
-
+                <div class="col-12 col-sm-6 col-md-3">
+                    <article class="author-card p-3 border rounded h-100">
+                        <span class="badge bg-secondary mb-2">02</span>
+                        <h3 class="h5 mt-1">J.R.R. Tolkien</h3>
+                        <p class="text-muted small mb-0">Known for creating detailed fantasy worlds.</p>
+                    </article>
+                </div>
 
                 <!-- AUTHOR 3 -->
-
-                <article class="author-card">
-
-                    <span>
-                        03
-                    </span>
-
-
-                    <h3>
-                        Agatha Christie
-                    </h3>
-
-
-                    <p>
-                        One of the most famous
-                        mystery writers.
-                    </p>
-
-                </article>
-
-
+                <div class="col-12 col-sm-6 col-md-3">
+                    <article class="author-card p-3 border rounded h-100">
+                        <span class="badge bg-secondary mb-2">03</span>
+                        <h3 class="h5 mt-1">Agatha Christie</h3>
+                        <p class="text-muted small mb-0">One of the most famous mystery writers.</p>
+                    </article>
+                </div>
 
                 <!-- AUTHOR 4 -->
-
-                <article class="author-card">
-
-                    <span>
-                        04
-                    </span>
-
-
-                    <h3>
-                        F. Scott Fitzgerald
-                    </h3>
-
-
-                    <p>
-                        Author of the classic
-                        The Great Gatsby.
-                    </p>
-
-                </article>
-
-
+                <div class="col-12 col-sm-6 col-md-3">
+                    <article class="author-card p-3 border rounded h-100">
+                        <span class="badge bg-secondary mb-2">04</span>
+                        <h3 class="h5 mt-1">F. Scott Fitzgerald</h3>
+                        <p class="text-muted small mb-0">Author of the classic The Great Gatsby.</p>
+                    </article>
+                </div>
             </div>
-
         </section>
-
 
     </div>
 
 </main>
 
 
-
 <!-- =========================
      FOOTER
 ========================= -->
-
-<footer>
-
-
-    <div class="footer-content">
-
-
+<footer class="mt-auto py-4 bg-light border-top">
+    <div class="footer-content container">
         <div>
-
-            <a
-                href="index.html"
-                class="logo">
-
+            <a href="index.html" class="logo">
                 Book<span>Nest</span>
-
             </a>
-
-
-            <p>
-                A small digital home
-                for great stories.
-            </p>
-
+            <p class="mt-2 text-muted">A small digital home for great stories.</p>
         </div>
-
-
 
         <div>
-
-            <strong>
-                Team Members
-            </strong>
-
-
-            <p>
-                Inzhu · Akerke
-            </p>
-
+            <strong>Team Members</strong>
+            <p class="m-0 text-muted">Inzhu · Akerke</p>
         </div>
 
-
-
-        <p>
-            © 2026 BookNest
-        </p>
-
-
+        <p class="m-0 text-muted">© 2026 BookNest</p>
     </div>
-
 </footer>
 
-
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

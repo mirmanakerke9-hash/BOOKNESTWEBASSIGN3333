@@ -1,6 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
 
+a {
+    text-decoration: none !important;
+    color: inherit;
+}
 
+
+.nav-link {
+    color: #6e5b50 !important;
+}
+
+.nav-link:hover, 
+.nav-link.active {
+    background: #33251f !important;
+    color: #ffffff !important;
+}
 
 
 * {
@@ -76,13 +90,35 @@ p {
 ========================= */
 
 header {
-    background: #fffdf9;
+    background: #fffdf9 !important;
     border-bottom: 1px solid #ded1c1;
-
     position: sticky;
     top: 0;
+    z-index: 1000;
+}
 
-    z-index: 100;
+
+.navbar-toggler {
+    border-color: #ded1c1 !important;
+}
+
+.navbar-toggler-icon {
+    filter: invert(20%) sepia(15%) saturate(1000%) hue-rotate(350deg);
+}
+
+
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background: #fffdf9;
+        padding: 15px;
+        border-top: 1px solid #ded1c1;
+        margin-top: 10px;
+    }
+    
+    .nav-menu a {
+        display: block !important;
+        margin-bottom: 5px;
+    }
 }
 
 
@@ -788,98 +824,42 @@ header {
 
 
 /* =========================
-   CONTACT - GRID
+   CONTACT SECTION
 ========================= */
 
-.contact-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
-    gap: 60px;
-
-    align-items: start;
-}
-
-
-.contact-info h2 {
-    margin-bottom: 20px;
-}
-
-
 .contact-detail {
-
-    display: flex;
-
-    gap: 15px;
-
-    margin-top: 30px;
-
-    align-items: flex-start;
+    background: #f7f1e8;
+    border: 1px solid #ded1c1 !important;
 }
-
 
 .contact-detail > span {
     color: #b85c38;
-
     font-weight: 700;
 }
 
-
-/* =========================
-   CONTACT FORM
-========================= */
-
 .contact-form {
+    background: #f7f1e8 !important;
+    border: 1px solid #ded1c1 !important;
+}
 
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 12px;
-
-    padding: 30px;
-
-    background: #f7f1e8;
-
+.contact-form .form-control,
+.contact-form .form-select {
     border: 1px solid #ded1c1;
+    border-radius: 4px;
+    padding: 12px;
+    background-color: #ffffff;
 }
 
-
-.contact-form input,
-.contact-form select,
-.contact-form textarea {
-
-    width: 100%;
-
-    padding: 13px;
-
-    border: 1px solid #ded1c1;
-
-    background: white;
-
-    font-family: inherit;
-
-    font-size: 1rem;
+.contact-form .form-control:focus,
+.contact-form .form-select:focus {
+    border-color: #b85c38;
+    box-shadow: 0 0 0 0.25rem rgba(184, 92, 56, 0.25);
 }
-
-
-.contact-form input:focus,
-.contact-form select:focus,
-.contact-form textarea:focus {
-
-    outline: 2px solid #b85c38;
-}
-
 
 .contact-form label {
     font-weight: 600;
-
     margin-top: 8px;
 }
-
 
 /* =========================
    FOOTER
@@ -968,18 +948,6 @@ footer p {
 
 @media (max-width: 650px) {
 
-    .nav-container {
-        flex-direction: column;
-
-        padding: 20px 0;
-    }
-
-
-    .nav-menu {
-        flex-wrap: wrap;
-
-        justify-content: center;
-    }
 
 
     .hero {
